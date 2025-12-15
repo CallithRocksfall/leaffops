@@ -1,0 +1,103 @@
+* {
+    font-size:21px;
+    font-family: "JetBrains Mono Nerd Font";
+}
+
+window#waybar{
+    background: #2e2c2f;
+}
+
+tooltip {
+    color: blue;
+}
+
+#custom-notification {
+    padding: 0px 2px;
+    color: #ba5860;
+    transition: all .2s ease;
+    padding-top: 5px;
+}
+  
+#workspaces {
+    padding: 0px 2px;
+}
+
+#workspaces button {
+    all:unset;
+    padding: 0px 10px;
+    color: #729b79;
+}
+
+#workspaces button.active {
+    color: #729b79;
+    border: none;
+}
+
+#workspaces button:hover {
+    color:rgba(0,0,0,0);
+    border: none;
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
+    transition: all 1s ease;
+}
+
+#workspaces button.empty {
+    color: #252326;
+    border: none;
+}
+
+#workspaces button.empty:hover {
+    color: rgba(0,0,0,0);
+    border: none;
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
+    transition: all 1s ease;
+}
+
+#workspaces button.empty.active {
+    color: #729b79;
+    border: none;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+}
+
+#pulseaudio-slider {
+    padding: 0;
+    margin: 4px 0;
+}
+
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    all:unset;
+}
+
+#pulseaudio-slider trough {
+    min-height: 80px;
+    min-width: 17px;
+    border-radius: 3px;
+    background-color: #252326;
+    margin-left: 4px;
+}    
+
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 3px;
+    background-color: #489ca5;
+}
+
+#custom-placeholder {
+    padding: 0px 2px;
+    color: #489ca5;
+    transition: all .2s ease;
+}
+
+#tray {
+  color: white;
+  padding: 0px 2px;
+}
+
+#custom-binaryClock {
+  padding-bottom: 5px;
+}
