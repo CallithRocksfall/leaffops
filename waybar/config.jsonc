@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "left",
   "reload_style_on_change": true,
-  "modules-left": ["custom/notification", "hyprland/workspaces", "pulseaudio/slider", "group/notification"],
+  "modules-left": ["custom/notification", "niri/workspaces", "pulseaudio/slider", "group/notification"],
   "modules-center": [],
   "modules-right": ["custom/binaryClock"],
 
@@ -13,7 +13,7 @@
       "escape": true
   },
 
-  "hyprland/workspaces": {
+  "niri/workspaces": {
       "format": "{icon}",
       "format-icons": {
           "active": "",
@@ -31,7 +31,7 @@
   },
 
   "custom/binaryClock": {
-      "exec": "/usr/bin/python3 /home/sarahfops/.config/foxbar/scripts/binaryClock.py",
+      "exec": "/usr/bin/python3 /home/sarahfops/.config/waybar/scripts/binaryClock.py",
       "return-type": "json",
       "interval": 1,
       "format": "{text}",
