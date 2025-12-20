@@ -1,0 +1,11 @@
+
+[meta]
+version = 1
+name = "Leaf"
+description = "Inspired by the Leaf KDE Color Scheme"
+variant = "dark"
+inherits = "vicinae-dark"
+
+[colors.core]
+background = "#2E2C2F"
+foreground = "#729B79"

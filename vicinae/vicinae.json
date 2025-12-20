@@ -1,0 +1,24 @@
+{
+    "closeOnFocusLoss": false,
+    "considerPreedit": false,
+    "faviconService": "twenty",
+    "font": {
+        "normal": "JetBrainsMonoNL Nerd Font Mono",
+        "size": 10.5
+    },
+    "keybinding": "default",
+    "keybinds": {
+    },
+    "popToRootOnClose": true,
+    "rootSearch": {
+        "searchFiles": false
+    },
+    "theme": {
+        "name": "leaf"
+    },
+    "window": {
+        "csd": true,
+        "opacity": 0.98,
+        "rounding": 0
+    }
+}
