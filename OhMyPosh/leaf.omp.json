@@ -50,6 +50,22 @@
         }
       ],
       "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+	{ 
+          "foreground": "#ffffff",
+          "options": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": "\u276f ",
+          "type": "status"
+        }
+      ],
+      "type": "prompt"
     }
   ],
   "final_space": true,
