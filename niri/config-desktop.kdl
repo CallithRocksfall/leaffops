@@ -272,6 +272,9 @@ layout {
         // top 64
         // bottom 64
     }
+    tab-indicator {
+	    place-within-column
+    }
 }
 
 window-rule {
