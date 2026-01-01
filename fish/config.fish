@@ -7,6 +7,10 @@ function y
     end
     rm -f -- "$tmp"
 end
+function fish_greeting
+    echo Hello little fops :3
+    echo  
+end
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
