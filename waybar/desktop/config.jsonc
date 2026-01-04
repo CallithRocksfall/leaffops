@@ -2,11 +2,11 @@
   "layer": "top",
   "position": "left",
   "reload_style_on_change": true,
-  "modules-left": ["custom/notification", "niri/workspaces", "pulseaudio/slider", "group/notification"],
+  "modules-left": ["custom/swaync", "niri/workspaces", "group/notificationTray", "custom/hackspaceOpen"],
   "modules-center": [],
   "modules-right": ["custom/binaryClock"],
 
-  "custom/notification": {
+  "custom/swaync": {
       "tooltip": false,
       "format": "",
       "on-click": "swaync-client -t -sw",
@@ -16,13 +16,11 @@
   "niri/workspaces": {
       "format": "{icon}",
       "format-icons": {
+	  "browser": "",
+	  "chat": "",
           "active": "",
-          "default": "",
-          "empty": ""
-      },
-      "persistent-workspaces": {
-          "*": [ 1,2,3,4,5 ]
-      }
+          "default": ""
+	}
   },
   
   "tray": {
@@ -34,21 +32,22 @@
       "exec": "/usr/bin/python3 /home/sarahfops/.config/waybar/scripts/binaryClock.py",
       "return-type": "json",
       "interval": 1,
-      "format": "{text}",
+      "format": "{text}"
   },
 
-  "pulseaudio/slider": {
-    "min": 0,
-    "max": 100,
-    "orientation": "vertical"
+  "custom/hackspaceOpen":{
+      "exec": "/usr/bin/python3 /home/sarahfops/.config/waybar/scripts/hackspaceOpen.py",
+      "return-type": "json",
+      "interval": 300,
+      "format": "{text}"
   },
 
   "custom/placeholder": {
     "tooltip": false,
-      "format": "",
+      "format": ""
   },
 
-  "group/notification": {
+  "group/notificationTray": {
       "orientation": "inherit",
     "drawer": {
       "transition-duration": 500,
@@ -60,5 +59,5 @@
         "tray"
       ]
     }
-  },
+  }
 } 
