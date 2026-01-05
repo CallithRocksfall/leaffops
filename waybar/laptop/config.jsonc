@@ -1,0 +1,97 @@
+{
+  "layer": "top",
+  "position": "left",
+  "reload_style_on_change": true,
+  "modules-left": ["custom/swaync", "niri/workspaces", "group/notificationTray", "custom/hackspaceOpen"],
+  "modules-center": ["battery", "network"],
+  "modules-right": ["custom/binaryClock"],
+
+  "custom/swaync": {
+      "tooltip": false,
+      "format": "",
+      "on-click": "swaync-client -t -sw",
+      "escape": true
+  },
+
+  "niri/workspaces": {
+      "format": "{icon}",
+      "format-icons": {
+	  "browser": "",
+	  "chat": "",
+          "active": "",
+          "default": ""
+	}
+  },
+  
+  "battery": {
+    "interval": 60,
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{icon}",
+    "format-charging": "{icon}",
+    "format-icons": {
+      "default": ["󰂎", "󰁼", "󰁿", "󰂂", "󰁹"],
+      "charging" : ["󰢟","󰂆","󰢝","󰂊","󰂅"],
+    },
+    "max-length": 25
+  },
+
+  "network": {
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰀂",
+    "format-disconnected": "󰖪",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "nospacing": 1
+  },
+  
+  "tray": {
+      "icon-size": 14,
+      "spacing": 10
+  },
+
+  "custom/binaryClock": {
+      "exec": "/usr/bin/python3 /home/sarahfops/.config/waybar/scripts/binaryClock.py",
+      "return-type": "json",
+      "interval": 1,
+      "format": "{text}"
+  },
+
+  "custom/hackspaceOpen":{
+      "exec": "/usr/bin/python3 /home/sarahfops/.config/waybar/scripts/hackspaceOpen.py",
+      "return-type": "json",
+      "interval": 300,
+      "format": "{text}"
+  },
+
+  "custom/placeholder": {
+    "tooltip": false,
+      "format": ""
+  },
+
+  "group/notificationTray": {
+      "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": true,
+      "click-to-reveal": true
+      },
+      "modules": [
+        "custom/placeholder",
+        "tray"
+      ]
+    }
+  }
+} 
