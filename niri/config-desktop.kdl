@@ -281,6 +281,7 @@ window-rule {
     match app-id="org.telegram.desktop"
     match app-id="signal"
     match app-id="discord"
+    match app-id="Element"
     match app-id="org.mozilla.Thunderbird"
 
     open-on-workspace "chat"
@@ -303,13 +304,13 @@ window-rule {
 spawn-at-startup "waybar"
 spawn-at-startup "swaync"
 spawn-at-startup "firefox"
+spawn-at-startup "element-desktop"
 spawn-at-startup "signal-desktop"
 spawn-at-startup "Telegram"
-spawn-at-startup "discord"
 
 //Programs that need a bit more time and thus are started with a sleep
 spawn-sh-at-startup "sleep 8 && thunderbird"
-
+spawn-sh-at-startup "sleep 8 && discord"
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
