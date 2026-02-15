@@ -2,9 +2,9 @@
   "layer": "top",
   "position": "left",
   "reload_style_on_change": true,
-  "modules-left": ["custom/swaync", "niri/workspaces"],
+  "modules-left": ["custom/swaync", "niri/workspaces", "group/notificationTray", "custom/hackspaceOpen"],
   "modules-center": [],
-  "modules-right": [ "group/notificationTray", "custom/hackspaceOpen", "clock"],
+  "modules-right": ["custom/binaryClock"],
 
   "custom/swaync": {
       "tooltip": false,
@@ -28,12 +28,11 @@
       "spacing": 10
   },
 
-  "clock": {
-      "interval": 60,
-      "tooltip": true,
-      "format": "{:%H:%M} ",
-      "tooltip-format": "{:%Y-%m-%d}",
-      "rotate": 90
+  "custom/binaryClock": {
+      "exec": "/usr/bin/python3 /home/sarahfops/.config/waybar/scripts/binaryClock.py",
+      "return-type": "json",
+      "interval": 1,
+      "format": "{text}"
   },
 
   "custom/hackspaceOpen":{
@@ -52,7 +51,7 @@
       "orientation": "inherit",
     "drawer": {
       "transition-duration": 500,
-      "transition-left-to-right": false,
+      "transition-left-to-right": true,
       "click-to-reveal": true
       },
       "modules": [
