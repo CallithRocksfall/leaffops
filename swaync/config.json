@@ -13,7 +13,7 @@
   "timeout-critical": 0,
   "fit-to-screen": false,
   "control-center-width": 500,
-  "control-center-height": 1430,
+  "control-center-height": 1070,
   "notification-window-width": 500,
   "keyboard-shortcuts": true,
   "image-visibility": "when-available",
@@ -24,6 +24,7 @@
   "text-empty": "No Notification",
   "widgets": [
     "title",
+    "backlight",
     "volume",
     "mpris"
   ],
