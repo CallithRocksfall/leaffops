@@ -2,9 +2,9 @@
   "layer": "top",
   "position": "left",
   "reload_style_on_change": true,
-  "modules-left": ["custom/swaync", "niri/workspaces", "group/notificationTray", "custom/hackspaceOpen"],
+  "modules-left": ["custom/swaync", "niri/workspaces"],
   "modules-center": ["battery", "network"],
-  "modules-right": ["custom/binaryClock"],
+  "modules-right": [ "group/notificationTray", "custom/hackspaceOpen", "clock"],
 
   "custom/swaync": {
       "tooltip": false,
@@ -29,8 +29,9 @@
         "warning": 30,
         "critical": 15
     },
-    "format": "{icon}",
-    "format-charging": "{icon}",
+    "format": "{icon} {capacity}%",
+    "format-charging": "{icon} {capacity}% (Charging)",
+    "rotate": 90,
     "format-icons": {
       "default": ["󰂎", "󰁼", "󰁿", "󰂂", "󰁹"],
       "charging" : ["󰢟","󰂆","󰢝","󰂊","󰂅"],
@@ -47,14 +48,15 @@
       "󰤨"
     ],
     "format": "{icon}",
-    "format-wifi": "{icon}",
+    "format-wifi": "{icon} {signalStrength}%",
     "format-ethernet": "󰀂",
     "format-disconnected": "󰖪",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
-    "nospacing": 1
+    "nospacing": 1,
+    "rotate": 90,
   },
   
   "tray": {
@@ -62,11 +64,12 @@
       "spacing": 10
   },
 
-  "custom/binaryClock": {
-      "exec": "/usr/bin/python3 /home/sarahfops/.config/waybar/scripts/binaryClock.py",
-      "return-type": "json",
-      "interval": 1,
-      "format": "{text}"
+  "clock": {
+      "interval": 60,
+      "tooltip": true,
+      "format": "{:%H:%M} ",
+      "tooltip-format": "{:%Y-%m-%d}",
+      "rotate": 90
   },
 
   "custom/hackspaceOpen":{
